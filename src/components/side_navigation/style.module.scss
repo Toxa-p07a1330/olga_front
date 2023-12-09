@@ -1,0 +1,22 @@
+.button{
+  background-color: #ffb68e;
+  width: 150px;
+  height: 150px;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+
+
+  & > a >  img{
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: contain;
+  }
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}

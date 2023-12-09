@@ -1,9 +1,17 @@
 .wrapper{
-
+  background-color: #FFA06B;
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  padding-right: 0px;
 }
 .content{
-
+  background-color: #FFBD99;
+  width: calc(100% - 200px);
+  height: calc(100vh - 80px);
 }
 .sideMenu{
-
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
 }
