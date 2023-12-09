@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.columnWrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 25px;
+  flex-direction: column;
+  width: 100%;
+
+  &:last-of-type {
+    margin-right: 0px;
+  }
+}
+
+.title {
+  background-color: #E18A7b;
+  height: 75px;
+  width: 100%;
+  margin-bottom: 25px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-shadow: #333 0px 4px 4px;
+  color: #250000E5;
+}
+
+.body {
+
+}
