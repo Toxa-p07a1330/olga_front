@@ -5,7 +5,7 @@ import {ErrorPage} from "../pages/error/error-page";
 export const OptionalSide = () => {
     const router = createBrowserRouter([
         {
-            path: "/service",
+            path: "/service/*",
             element: <ContentfulPage/>,
             errorElement: <ErrorPage/>
         },
