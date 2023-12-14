@@ -49,6 +49,150 @@ export const Profile = () => {
                 value: undefined
             },
         ],
+        [
+            {
+                key: "name1",
+                placeholder: "Фамилия",
+                handler: () => {
+                    console.log("name1 changed")
+                },
+                extraStyle: "",
+                type: "text-input",
+                value: undefined
+            },
+            {
+                key: "name2",
+                placeholder: "Имя",
+                handler: () => {
+                    console.log("name2 i")
+                },
+                extraStyle: "",
+                type: "text-input",
+                value: undefined
+            },
+            {
+                key: "name3",
+                placeholder: "Отчество",
+                handler: () => {
+                    console.log("name3 changed")
+                },
+                extraStyle: style.extra_margin_bottom,
+                type: "text-input",
+                value: undefined
+            },
+            {
+                key: "birth",
+                placeholder: "День рождения",
+                handler: () => {
+                    console.log("birth changed")
+                },
+                extraStyle: "",
+                type: "text-input",
+                value: undefined
+            },
+            {
+                key: "gender",
+                placeholder: "Пол",
+                handler: () => {
+                    console.log("gender i")
+                },
+                extraStyle: style.extra_margin_bottom,
+                type: "text-input",
+                value: undefined
+            },
+            {
+                key: "email",
+                placeholder: "Email",
+                handler: () => {
+                    console.log("email changed")
+                },
+                extraStyle: "",
+                type: "text-input",
+                value: undefined
+            },
+            {
+                key: "phone",
+                placeholder: "Номер телефона",
+                handler: () => {
+                    console.log("phone changed")
+                },
+                extraStyle: "",
+                type: "text-input",
+                value: undefined
+            },
+        ],
+        [
+            {
+                key: "state",
+                placeholder: "Страна",
+                handler: () => {
+                    console.log("state changed")
+                },
+                extraStyle: "",
+                type: "text-input",
+                value: undefined
+            },
+            {
+                key: "district",
+                placeholder: "Район",
+                handler: () => {
+                    console.log("district i")
+                },
+                extraStyle: "",
+                type: "text-input",
+                value: undefined
+            },
+            {
+                key: "city",
+                placeholder: "Город",
+                handler: () => {
+                    console.log("city changed")
+                },
+                extraStyle: style.extra_margin_bottom,
+                type: "text-input",
+                value: undefined
+            },
+            {
+                key: "town",
+                placeholder: "Населенный пункт",
+                handler: () => {
+                    console.log("town changed")
+                },
+                extraStyle: "",
+                type: "text-input",
+                value: undefined
+            },
+            {
+                key: "line",
+                placeholder: "Улица",
+                handler: () => {
+                    console.log("line i")
+                },
+                extraStyle: "",
+                type: "text-input",
+                value: undefined
+            },
+            {
+                key: "home",
+                placeholder: "Дом",
+                handler: () => {
+                    console.log("home changed")
+                },
+                extraStyle: style.extra_margin_bottom,
+                type: "text-input",
+                value: undefined
+            },
+            {
+                key: "index",
+                placeholder: "Индекс",
+                handler: () => {
+                    console.log("index changed")
+                },
+                extraStyle: "",
+                type: "text-input",
+                value: undefined
+            },
+        ],,
     ])
 
     const [config] = useState([
@@ -59,13 +203,14 @@ export const Profile = () => {
             profilePhoto: profilePhoto
         },
         {
-            content: <div>
-                2nd column content will be here
+            content: <div className={style.formWrapper}>
+                {fieldConverted(inputFields[1])}
             </div>
         },
         {
-            content: <div>
-                3rd column content will be here
+            content: <div className={style.formWrapper}>
+                {fieldConverted(inputFields[2])}
+                <div className={style.save}>Сохранить</div>
             </div>
         },
 
