@@ -60,3 +60,46 @@
     margin: 16px;
   }
 }
+
+.extra_style_template{
+
+}
+.formWrapper{
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-right: 40px;
+    margin-left: 40px;
+    height: 100%;
+    & > input{
+      background: #F2AE7C;
+      width: 100%;
+      height: 62px;
+      border-radius: 62px;
+      margin-bottom: 20px;
+      max-height: 62px;
+      border: none;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: 'Roboto', sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      padding-left: 20px;
+      margin-top: 10px;
+      color: rgba(20, 0, 0, 0.85);
+
+      &::placeholder{
+        font-family: 'Roboto', sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        color: rgba(37, 0, 0, 0.50);
+      }
+    }
+  }
+}
