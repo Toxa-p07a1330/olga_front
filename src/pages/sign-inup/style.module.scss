@@ -8,6 +8,8 @@
   background: #F19066;
   z-index: 2;
   border-radius: 60px;
+  position: fixed;
+  left: 600px
 }
 
 .title {
@@ -160,14 +162,16 @@
   margin-bottom: 16px;
 }
 .leftImage{
-  position: absolute;
+  position: fixed;
   z-index: 3;
   transform: scale(0.9);
   left: 50px;
   bottom: -30px;
 }
 .rightImage{
-  position: absolute;
+  position: fixed;
   z-index: 1;
   transform: scale(0.7);
+  top:0px;
+  left: 700px
 }
