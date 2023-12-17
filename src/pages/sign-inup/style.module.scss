@@ -1,0 +1,47 @@
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title{
+
+}
+.modeSelector{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.singleMode{
+  border: 1px solid red;
+  padding: 5px;
+  margin: 5px;
+}
+.activeMode{
+  color: red
+}
+.login{
+
+}
+.email{
+
+}
+.password{
+
+}
+.rulesWrapper{
+
+}
+.delimiter{
+
+}
+.googleAuth{
+
+}
+.regButton{
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid green;
+  padding: 5px;
+}
