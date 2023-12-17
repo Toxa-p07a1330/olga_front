@@ -1,7 +1,11 @@
 import style from "./style.module.scss"
 import {useState} from "react";
+import alertJDL from "../../logic/show-modal/show-modal";
 
 export const Faq = () => {
+    const searchClickHandler = () => {
+        alertJDL("Answer")
+    }
     const [searchValue, setSearchValue] = useState("")
     return <div className={style.wrapper}>
         <div className={style.header}>
@@ -11,7 +15,7 @@ export const Faq = () => {
                     <input value={searchValue} placeholder={"Поиск в справке"}
                            onChange={(e) => setSearchValue(e.target.value)}/>
                 </div>
-                <div className={style.searchButton}>Найти</div>
+                <div className={style.searchButton} onClick={searchClickHandler}>Найти</div>
             </div>
         </div>
         <div className={style.questionList}>
