@@ -64,11 +64,30 @@
 }
 
 .questionList {
-
+  flex-flow: wrap;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
 }
 
 .singleQuestion {
-
+  background: #D97F77CC;
+  border-radius: 30px;
+  height: 150px;
+  margin-bottom: 45px;
+  margin-right: 70px;
+  width: calc(33% - 45px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  &:nth-child(3n){
+    margin-right: 0;
+  }
+  & > div{
+    margin: 10px;
+  }
+  cursor: pointer;
 }
 
 .answer {

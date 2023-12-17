@@ -1,12 +1,46 @@
 import style from "./style.module.scss"
-import {useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import alertJDL from "../../logic/show-modal/show-modal";
+import {getFaq} from "../../logic/getFaq/getFAQ";
+import {SingleAnswerCard} from "./SingleAnswerCard";
 
 export const Faq = () => {
-    const searchClickHandler = () => {
-        alertJDL("Answer")
+
+    const [searchValue, setSearchValue] = useState("");
+    const [items, setItems] = useState([])
+    const [isLoading, setLoading] = useState(false)
+    useEffect(() => {
+        (async () => {
+            const fetchedItems = await getFaq("");
+            setItems(fetchedItems)
+        })()
+    }, [])
+
+    const searchClickHandler = async () => {
+        setLoading(true)
+        const fetchedItems = await getFaq(searchValue);
+        setItems(fetchedItems)
+        setLoading(false)
     }
-    const [searchValue, setSearchValue] = useState("")
+
+    const getResult = useCallback(() => {
+        if (isLoading)
+            return <>
+                <div>Loading</div>
+            </>
+        if (!items.length) {
+            return <div>
+                Nothing was found
+            </div>
+        }
+        return <>
+            {items.map(v => <SingleAnswerCard question={v.question} clickCallback={() => {
+                alertJDL(v.answer)
+            }}/>)}
+        </>
+    }, [isLoading, items])
+
+
     return <div className={style.wrapper}>
         <div className={style.header}>
             <div className={style.title}>Чем вам помочь?</div>
@@ -19,8 +53,9 @@ export const Faq = () => {
             </div>
         </div>
         <div className={style.questionList}>
-
+            {getResult()}
         </div>
+
         <div className={style.answer}>
 
         </div>
